@@ -17,25 +17,27 @@ namespace CodeKata1
             }
 
             string[] split = line.Split(new string[] { "  " }, StringSplitOptions.None);
-            var Black = split[0].Substring(7, 14).ToString();
-            var White = split[1].Substring(7, 14).ToString();
+            var Black = new Hand(split[0]);
+            var White = new Hand(split[1]);
 
-             ////Create lists
-            string[] B = Black.Split(new Char[] { ' ' });
-            List<string> BlackList =new List<string>(B);
-            string[] W = White.Split(new Char[] { ' ' });
-            List<string> WhiteList =new List<string>(W);
             
-            Hand(BlackList);
+            
+            // ////Create lists
+            //string[] B = Black.Split(new Char[] { ' ' });
+            //List<string> BlackList =new List<string>(B);
+            //string[] W = White.Split(new Char[] { ' ' });
+            //List<string> WhiteList =new List<string>(W);
+            
+            //Hand(BlackList);
       
 
 
 
-            int Handvalue = 0;
+            //int Handvalue = 0;
 
-            public class Flush{
-                if(x => x.suit !=suit[0])
-            }
+            //public class Flush{
+            //    if(x => x.suit !=suit[0])
+            //}
 
             ///////////////////////////tests
             //////////////////////////Console.WriteLine(Black);

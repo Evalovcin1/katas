@@ -7,14 +7,26 @@ namespace CodeKata1
 {
     public class Hand
     {
-        public Hand(list PlayerList)
+        public List<Card> Cards;
+        public string PlayerIdentifier;
+
+        
+        public Hand(string PlayerList)
         {
-            var playerCards = new List<Card>();
-                foreach(var item in PlayerList)
-                {
-                    playerCards.Add(new Card(item.Substring(0,1), item.Substring(1,1)));
-                }
-             playerCards.Sort();
+            var RawHand = PlayerList.Split(':');
+            PlayerIdentifier = RawHand[0];
+
+            Cards = new List<Card>();
+            foreach (var item in RawHand[1].Trim().Split(' '))
+            {
+                Cards.Add(new Card(item.Substring(0, 1), item.Substring(1, 1)));
+            }
+            Cards.Sort();
         }
+
+        private void methodNAme(string name) { }
+
+         
+
     }
 }
